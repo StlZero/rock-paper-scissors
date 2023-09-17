@@ -1,9 +1,14 @@
 // Variables
 
 const choice = ["rock", "paper", "scissor"];
+let playerCounter = 0;
+let computerCounter = 0;
 
 // playerSelection
-let playerChoice = prompt("What's your choice").toLowerCase();
+function playerChoice(){
+    let getChoice = prompt("What's your choice").toLowerCase();
+    return getChoice;
+}
 
 // computerSelection
 function getComputerChoice() {
@@ -11,10 +16,11 @@ function getComputerChoice() {
     return choice[randomChoice];
 }
 
-
+// Return the result of a round
 function playRound(playerSelection, computerSelection) {
     // Case where the choices are the same
-    console.log("Inside function: " + computerSelection);
+    console.log("Player picked " + playerSelection);
+    console.log("Computer picked " + computerSelection);
 
     if (playerSelection == computerSelection) {
         return ("It's a tie!");
@@ -45,18 +51,38 @@ function playRound(playerSelection, computerSelection) {
         else {
             return ("You lose");
         }
-        
     }
-
 }
-   
-console.log(playRound(playerChoice, getComputerChoice()));
 
-// const playerSelection = "rock";
-// const computerSelection = getComputerChoice();
-// console.log(playRound(playerSelection, computerSelection));
+// Keeping player's and computer's score
+function game(roundResult) {
+    // Shows previous round's result
+    console.log(roundResult);
 
-function game() {
-    //Previous function inside this function. Keep track of scores
-    //5 rounds game
+    if (roundResult == "You win!") {
+        return playerCounter += 1;
+    } else if (roundResult == "You lose") {
+        return computerCounter += 1;
+    } else {
+        return;
+    }
+}
+
+// Plays game for 5 rounds
+for (let i = 1; i < 6; i++) {
+    console.log("Round: " + i);
+    game(playRound(playerChoice(), getComputerChoice()));
+}
+
+// Player's and Computer's counter after 5 rounds
+console.log("Player counter: " + playerCounter);
+console.log("Computer counter: " + computerCounter);
+
+// Calculating winner
+if (playerCounter > computerCounter) {
+    console.log("Final result: Player won!");
+} else if (computerCounter > playerCounter) {
+    console.log("Final result: Computer won!");
+} else {
+    console.log("Final result: It's a tie!");
 }
