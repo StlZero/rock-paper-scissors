@@ -68,11 +68,21 @@ function game(roundResult) {
     }
 }
 
+let btn1 = document.querySelector('#btn1');
+let btn2 = document.querySelector('#btn2');
+let btn3 = document.querySelector('#btn3');
+
+let event = btn1.addEventListener('click', () => {
+    playRound(playerChoice(), getComputerChoice());
+});
+
+
+
 // Plays game for 5 rounds
-for (let i = 1; i < 6; i++) {
-    console.log("Round: " + i);
-    game(playRound(playerChoice(), getComputerChoice()));
-}
+// for (let i = 1; i < 6; i++) {
+//     console.log("Round: " + i);
+//     game(playRound(playerChoice(), getComputerChoice()));
+// }
 
 // Player's and Computer's counter after 5 rounds
 console.log("Player counter: " + playerCounter);
