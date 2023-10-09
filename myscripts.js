@@ -11,6 +11,9 @@ let btn = document.querySelector('button');
 let para1 = document.querySelector('.para1');
 let para2 = document.querySelector('.para2');
 
+let par1 = document.querySelector('.par1');
+let par2 = document.querySelector('.par2');
+
 let counter_box1 = document.querySelector('.counter_box1');
 let counter_box2 = document.querySelector('.counter_box2');
 
@@ -37,6 +40,9 @@ function playRound(playerSelection, computerSelection) {
     // Case where the choices are the same
     console.log("Player picked " + playerSelection);
     console.log("Computer picked " + computerSelection);
+
+    par1.textContent = "Player picked: " + playerSelection;
+    par2.textContent = "Computer picked: " + computerSelection;
 
     let para = document.createElement('p');
     para.classList.add('console');
@@ -106,6 +112,9 @@ start_btn.addEventListener('click', () => {
     playerCounter = 0;
     para1.textContent = 0;
     para2.textContent = 0;
+
+    par1.textContent = "";
+    par2.textContent = "";
 
     let consoles = document.querySelectorAll('.console');
 

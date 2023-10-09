@@ -37,3 +37,22 @@ body {
     margin: 10px;
     background-color: blue;
 }
+
+.result_div {
+    display: flex;
+    justify-content: center;
+}
+
+.result_box1 {
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+    background-color: yellowgreen;
+}
+
+.result_box2 {
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+    background-color: yellowgreen;
+}
