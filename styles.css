@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    
+}
+
+#start_game {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.scrollable {
+    text-align: justify;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: red;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hide;
+}
+
+.counter_div {
+    display: flex;
+    justify-content: center;
+}
+
+.counter_box1 {
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+    background-color: blue;
+}
+
+.counter_box2 {
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+    background-color: blue;
+}
