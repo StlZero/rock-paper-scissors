@@ -1,7 +1,21 @@
 body {
     text-align: center;
-    
+    font-family: 'Pixelify Sans', 'Akshar', sans-serif;
 }
+
+header h1 {
+    font-size: 96px;
+}
+
+button img {
+    width: 200px;
+    height: 200px;
+}
+
+button {
+    margin: 30px;
+}
+
 
 #start_game {
     display: block;
